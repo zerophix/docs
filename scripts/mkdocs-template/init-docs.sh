@@ -50,14 +50,22 @@ if [[ ! -d "$TARGET_DIR" ]]; then
 fi
 
 # 复制模板
-echo "[1/4] 复制文档目录结构..."
+echo "[1/5] 复制文档目录结构..."
 mkdir -p "$TARGET_DIR/docs"/{architecture,guides,reference,changelog,notes}
 cp -r "$TEMPLATE_DIR/docs/" "$TARGET_DIR/docs/"
 
-echo "[2/4] 生成 mkdocs.yml..."
+echo "[2/5] 生成 mkdocs.yml..."
 cp "$TEMPLATE_DIR/mkdocs.yml" "$TARGET_DIR/mkdocs.yml"
 
-echo "[3/4] 替换模板变量..."
+echo "[3/5] 复制 AI 规则文件 (CLAUDE.md)..."
+if [[ -f "$TEMPLATE_DIR/CLAUDE.md" ]]; then
+  cp "$TEMPLATE_DIR/CLAUDE.md" "$TARGET_DIR/CLAUDE.md"
+  echo "  已创建 CLAUDE.md"
+else
+  echo "  模板中无 CLAUDE.md，跳过"
+fi
+
+echo "[4/5] 替换模板变量..."
 # macOS sed 兼容写法
 if [[ "$(uname)" == "Darwin" ]]; then
   sed -i '' "s/{PROJECT_NAME}/$SITE_NAME/g" "$TARGET_DIR/mkdocs.yml"
@@ -73,7 +81,7 @@ else
   sed -i "s/{PROJECT_DESC}/项目文档站/g" "$TARGET_DIR/docs/index.md"
 fi
 
-echo "[4/4] 生成 requirements.txt（如不存在）..."
+echo "[5/5] 生成 requirements.txt（如不存在）..."
 if [[ ! -f "$TARGET_DIR/requirements.txt" ]]; then
   cat > "$TARGET_DIR/requirements.txt" << 'EOF'
 mkdocs>=1.6
@@ -94,5 +102,5 @@ echo "  cd $TARGET_DIR"
 echo "  pip install -r requirements.txt"
 echo "  mkdocs serve"
 echo ""
-echo "提示：将 docs/DOC-GUIDE.md 加入你的 AI 规则文件（.cursorrules / CLAUDE.md）中，"
-echo "      AI 就会遵循文档规范来操作。"
+echo "提示：CLAUDE.md 已包含核心文档规则，AI 工具会自动读取。"
+echo "      完整规范详见 docs/DOC-GUIDE.md。"
