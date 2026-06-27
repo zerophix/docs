@@ -242,7 +242,7 @@ pnpm up -L
 
 ## 相关链接
 
-- [安装指南](../getting-started/installation.md) - 环境搭建详细步骤
+- [安装指南](../guides/installation.md) - 环境搭建详细步骤
 - [配置参考](configuration.md) - 完整配置选项
 - [错误代码](error-codes.md) - 错误代码对照
 - [GitHub Issues](https://github.com/mingxilv/dolphinmind/issues) - 提交 Bug/Feature Request

@@ -12,11 +12,7 @@ order: 8
 
 | 分类 | 文档 | 状态 | 归档时间 |
 |------|------|------|----------|
-| 旧版架构 | [v1 后端设计](v1-backend-design.md) | Archived | 2026-01-10 |
-| 旧版架构 | [v1 前端设计](v1-frontend-design.md) | Archived | 2026-01-10 |
-| 旧版协作 | [v1 AI 协作机制](v1-ai-collaboration.md) | Archived | 2026-01-10 |
-| 废弃方案 | [GraphQL API 方案](deprecated-graphql.md) | Archived | 2026-01-12 |
-| 废弃方案 | [微服务拆分方案](deprecated-microservices.md) | Archived | 2026-01-12 |
+| <!-- 按需添加归档 --> | | | |
 
 ## 归档规范
 
@@ -29,11 +25,10 @@ order: 8
 
 | 版本 | 日期 | 主要变更 | 迁移指南 |
 |------|------|----------|----------|
-| v2.0 | 2026-01-15 | 重构为分层架构，引入 MCP 协议 | [迁移指南](../guides/migration-v2.md) |
+| v2.0 | 2026-01-15 | 重构为分层架构，引入 MCP 协议 | - |
 | v1.0 | 2025-12-01 | 初始版本，单体应用 | - |
 
 ## 相关链接
 
 - [架构设计](../architecture/index.md) - 当前架构文档
 - [开发指南](../guides/index.md) - 当前开发规范
-- [ADR 记录](../notes/index.md#架构决策) - 架构决策历史

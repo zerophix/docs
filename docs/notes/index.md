@@ -8,16 +8,19 @@ order: 7
 
 本章节收录 Learning Log 系统开发过程中的技术笔记、调研记录和碎片化知识。
 
-## 文档列表
+## 技能笔记
 
-| 分类 | 文档 | 状态 |
-|------|------|------|
-| 技术调研 | [MCP 协议调研](mcp-research.md) | Draft |
-| 技术调研 | [向量数据库选型](vector-db.md) | Draft |
-| 架构决策 | [ADR-001: 技术栈选型](adr-001-tech-stack.md) | Draft |
-| 架构决策 | [ADR-002: MCP 集成方案](adr-002-mcp-integration.md) | Draft |
-| 学习笔记 | [FastAPI 最佳实践](fastapi-patterns.md) | Draft |
-| 学习笔记 | [React 18 新特性](react18-features.md) | Draft |
+| 文档 | 描述 |
+|------|------|
+| [自动化](skills/automate.md) | 自动化工作流 |
+| [Docker](skills/docker.md) | 容器化实践 |
+| [Git](skills/git.md) | Git 工作流 |
+| [知识管理](skills/knowledge.md) | 知识沉淀方法 |
+| [文档编写](skills/docwrite.md) | 文档写作规范 |
+| [原则](skills/principles.md) | 核心原则 |
+| [质量](skills/quality.md) | 质量保障 |
+
+共 18 篇技能笔记，详见侧边栏导航。
 
 ## 笔记分类说明
 

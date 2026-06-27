@@ -12,7 +12,7 @@ order: 5
 
 | 文档 | 描述 | 状态 |
 |------|------|------|
-| [Learning Log 系统](learning-log.md) | 核心项目完整实现记录 | Draft |
+| <!-- 按需添加项目文档 --> | | |
 
 ## Learning Log 系统概览
 
@@ -36,5 +36,5 @@ Learning Log 是一个面向开发者的个人知识管理与 AI 协作平台，
 
 - [架构设计](../architecture/index.md) - 系统架构详解
 - [后端开发指南](../guides/backend.md) - 后端实现规范
-- [前端开发指南](../guides/frontend.md) - 前端实现规范
+- [前端设计系统](../architecture/frontend-design.md) - 前端实现规范
 - [API 参考](../reference/api.md) - 接口文档

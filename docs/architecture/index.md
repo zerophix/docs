@@ -26,6 +26,5 @@ order: 1
 
 ## 相关链接
 
-- [快速开始指南](../getting-started/index.md) - 环境搭建与启动
-- [后端 API 参考](../reference/api-reference.md) - 完整 API 接口文档
-- [前端组件库](../reference/component-reference.md) - 组件使用规范
+- [开发指南](../guides/index.md) - 开发规范与最佳实践
+- [API 参考](../reference/api.md) - 完整 API 接口文档

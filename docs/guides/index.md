@@ -1,40 +1,35 @@
 ---
 title: "开发指南"
-category: guides
-order: 3
 ---
 
 # 开发指南
 
-本章节包含 Learning Log 系统的开发规范、最佳实践和技术指南。
+本章节包含环境搭建、编码规范和各类操作指南。
 
-## 文档列表
+## 快速开始
 
-| 文档 | 描述 | 状态 |
-|------|------|------|
-| [后端开发指南](backend.md) | 后端开发规范、数据库设计、API 实现模式 | Draft |
-| [前端开发指南](frontend.md) | 前端组件开发、状态管理、样式规范 | Draft |
-| [API 设计指南](api-design.md) | RESTful API 设计原则、版本控制、错误处理 | Draft |
-| [测试策略](testing.md) | 单元测试、集成测试、E2E 测试策略与工具 | Draft |
+| 文档 | 描述 |
+|------|------|
+| [安装指南](installation.md) | 环境依赖安装 |
+| [快速上手](quickstart.md) | 五分钟跑通项目 |
+| [配置说明](configuration.md) | 环境变量与配置项 |
 
-## 核心原则
+## 开发规范
 
-- **类型安全**：TypeScript 严格模式 + Python 类型提示
-- **测试驱动**：核心逻辑必须有单元测试覆盖
-- **文档优先**：新增 API 先写文档再写代码
-- **约定优于配置**：遵循项目既定的代码风格与目录结构
+| 文档 | 描述 |
+|------|------|
+| [后端开发](backend.md) | 后端开发规范 |
 
-## 技术栈概览
+## 专题指南
 
-| 层级 | 技术栈 |
-|------|--------|
-| 后端 | FastAPI + SQLAlchemy + PostgreSQL |
-| 前端 | React 18 + TypeScript + Vite + Tailwind CSS |
-| AI 协作 | Claude Code + MCP (Model Context Protocol) |
-| 部署 | Docker + Docker Compose |
-
-## 相关链接
-
-- [架构设计](../architecture/index.md) - 系统整体架构
-- [API 参考](../reference/api.md) - 接口规范
-- [配置参考](../reference/configuration.md) - 环境变量与配置
+| 文档 | 描述 |
+|------|------|
+| [自动化快速参考](guide-automation-quick-reference.md) | AI 自动化操作速查 |
+| [通用设计](guide-generic-design.md) | 通用设计模式指南 |
+| [Learning Log 可移植指南](guide-learning-log-portable.md) | 项目移植说明 |
+| [Learning Log README](guide-learning-log-readme.md) | 项目 README |
+| [MCP 使用指南](guide-mcp-usage.md) | MCP 协议使用 |
+| [Mermaid 使用指南](guide-mermaid.md) | 图表绘制 |
+| [项目地图指南](guide-project-map.md) | 项目结构可视化 |
+| [Redis 集群指南](guide-redis-cluster.md) | Redis 集群配置 |
+| [工作流指南](guide-workflow.md) | 开发工作流 |

@@ -327,4 +327,4 @@ WS /ws/collaborate/{note_id}
 
 - [Swagger UI](http://localhost:8000/docs) - 交互式 API 文档
 - [ReDoc](http://localhost:8000/redoc) - 替代文档视图
-- [配置参考](../configuration.md) - 环境变量配置
+- [配置参考](configuration.md) - 环境变量配置

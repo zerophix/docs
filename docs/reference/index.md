@@ -55,4 +55,3 @@ order: 4
 
 - [开发指南](../guides/index.md) - 开发规范与最佳实践
 - [架构设计](../architecture/index.md) - 系统整体架构
-- [快速开始](../getting-started/index.md) - 环境搭建与启动

@@ -1,9 +1,9 @@
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 思维笔记
+# 思维笔记 — 项目文档站
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-site_name: Learning Log
-site_description: AI 协作开发笔记
+site_name: "思维笔记"
+site_description: "AI 协作开发笔记与知识管理"
 site_author: zerophix
 site_url: https://zerophix.github.io/learning-log/
 
@@ -18,25 +18,21 @@ copyright: Copyright &copy; 2026 zerophix
 # ── Navigation ──
 nav:
   - 首页: index.md
-  - 快速开始:
-    - 概览: getting-started/index.md
-    - 安装指南: getting-started/installation.md
-    - 快速上手: getting-started/quickstart.md
-    - 配置说明: getting-started/configuration.md
+  - 文档规范: DOC-GUIDE.md
+
   - 架构设计:
     - 概览: architecture/index.md
     - AI 协作机制: architecture/ai-collaboration.md
     - 后端设计: architecture/backend-design.md
     - 前端设计系统: architecture/frontend-design.md
     - MCP 工作流: architecture/mcp-workflow.md
+
   - 开发指南:
     - 概览: guides/index.md
+    - 安装指南: guides/installation.md
+    - 快速上手: guides/quickstart.md
+    - 配置说明: guides/configuration.md
     - 后端开发: guides/backend.md
-    - 前端开发: guides/frontend.md
-    - API 设计: guides/api-design.md
-    - 测试策略: guides/testing.md
-    # 新增的指南文档
-    - 后端指南: guides/backend.md
     - 自动化快速参考: guides/guide-automation-quick-reference.md
     - 通用设计: guides/guide-generic-design.md
     - Learning Log 可移植指南: guides/guide-learning-log-portable.md
@@ -46,38 +42,42 @@ nav:
     - 项目地图指南: guides/guide-project-map.md
     - Redis 集群指南: guides/guide-redis-cluster.md
     - 工作流指南: guides/guide-workflow.md
+
   - 参考文档:
     - 概览: reference/index.md
     - API 参考: reference/api.md
     - 配置参考: reference/configuration.md
     - 错误代码: reference/error-codes.md
     - 常见问题: reference/faq.md
-  - 项目实战:
-    - 概览: projects/index.md
-    - Learning Log: projects/learning-log.md
+
+  - 变更日志:
+    - 概览: changelog/index.md
+
+  - 笔记:
+    - 概览: notes/index.md
+    - 技能:
+        - 自动化: notes/skills/automate.md
+        - Coach: notes/skills/coach.md
+        - Docker: notes/skills/docker.md
+        - 文档编写: notes/skills/docwrite.md
+        - Flash Insight: notes/skills/flash-insight.md
+        - Git: notes/skills/git.md
+        - 初始化: notes/skills/init.md
+        - Interview: notes/skills/interview.md
+        - 知识管理: notes/skills/knowledge.md
+        - 日志: notes/skills/log.md
+        - 思维导图: notes/skills/map.md
+        - MVP: notes/skills/mvp.md
+        - 原则: notes/skills/principles.md
+        - 质量: notes/skills/quality.md
+        - Resume Context: notes/skills/resume-context.md
+        - Review: notes/skills/review.md
+        - Topic Consolidate: notes/skills/topic-consolidate.md
+        - Workspace Orchestrator: notes/skills/workspace-orchestrator.md
+
   - 周报:
     - 概览: weekly-reports/index.md
-  - 笔记:
-      - 概览: notes/index.md
-      - 技能:
-          - 自动化: notes/skills/automate.md
-          - Coach: notes/skills/coach.md
-          - Docker: notes/skills/docker.md
-          - 文档编写: notes/skills/docwrite.md
-          - Flash Insight: notes/skills/flash-insight.md
-          - Git: notes/skills/git.md
-          - 初始化: notes/skills/init.md
-          - Interview: notes/skills/interview.md
-          - 知识管理: notes/skills/knowledge.md
-          - 日志: notes/skills/log.md
-          - 思维导图: notes/skills/map.md
-          - MVP: notes/skills/mvp.md
-          - 原则: notes/skills/principles.md
-          - 质量: notes/skills/quality.md
-          - Resume Context: notes/skills/resume-context.md
-          - Review: notes/skills/review.md
-          - Topic Consolidate: notes/skills/topic-consolidate.md
-          - Workspace Orchestrator: notes/skills/workspace-orchestrator.md
+
   - 归档: archive/index.md
 
 # ── Theme ──

@@ -254,5 +254,5 @@ settings = Settings()
 
 ## 相关链接
 
-- [快速开始 - 配置说明](../getting-started/configuration.md) - 环境差异配置表
+- [配置说明](../guides/configuration.md) - 环境差异配置表
 - [API 参考](api.md) - 接口文档

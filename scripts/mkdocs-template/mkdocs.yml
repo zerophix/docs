@@ -1,0 +1,122 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# {PROJECT_NAME} — 项目文档站
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 使用说明：
+#   1. 全局替换 {PROJECT_NAME} 为实际项目名
+#   2. 全局替换 {PROJECT_DESC} 为项目简述
+#   3. 全局替换 {AUTHOR} 为作者名
+#   4. 按需调整 nav 中的子页面（增删 .md 文件后同步更新 nav）
+#   5. 运行 mkdocs serve 预览
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+site_name: "{PROJECT_NAME}"
+site_description: "{PROJECT_DESC}"
+site_author: "{AUTHOR}"
+
+# ── Navigation ──
+# 规则：每个目录下的 index.md 作为"概览"，其余文件按逻辑分组
+# AI 新增文档后，必须同步更新此 nav 节
+nav:
+  - 首页: index.md
+
+  - 架构设计:
+    - 概览: architecture/index.md
+    # 按需添加：
+    # - 系统架构: architecture/system-overview.md
+    # - 数据模型: architecture/data-model.md
+    # - 技术选型: architecture/tech-stack.md
+    # - 部署架构: architecture/deployment.md
+
+  - 开发指南:
+    - 概览: guides/index.md
+    # 按需添加：
+    # - 本地开发: guides/local-dev.md
+    # - API 规范: guides/api-convention.md
+    # - 测试指南: guides/testing.md
+
+  - 参考文档:
+    - 概览: reference/index.md
+    # 按需添加：
+    # - API 参考: reference/api.md
+    # - 配置参考: reference/configuration.md
+    # - 错误码: reference/error-codes.md
+
+  - 变更日志:
+    - 概览: changelog/index.md
+
+  - 笔记:
+    - 概览: notes/index.md
+    # 按需添加子笔记
+
+# ── Theme ──
+theme:
+  name: material
+  language: zh
+
+  features:
+    - navigation.top             # 回到顶部
+    - navigation.tracking        # 滚动高亮当前页面
+    - content.code.copy          # 代码块复制
+    - content.code.annotate      # 代码行注释
+    - search.highlight           # 搜索高亮
+    - search.suggest             # 搜索建议
+    - toc.follow                 # 右侧目录跟随
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换亮色模式
+
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+
+  icon:
+    repo: fontawesome/brands/github
+
+# ── Plugins ──
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+
+# ── Extensions ──
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.betterem:
+      smart_enable: all
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
