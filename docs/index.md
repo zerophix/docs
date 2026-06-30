@@ -29,6 +29,7 @@ status: stable
 | [深度沉淀](deep/README.md) | L3 Deep：系统性知识总结 |
 | [技能库](skills/README.md) | 可复用技能卡片 |
 | [贡献指南](guide/README.md) | 命名规范、文档模板、部署说明 |
+| [MCP 工作流](mcp-workflow.md) | MCP Filesystem 配置流程 |
 
 ## 当前状态
 
@@ -39,7 +40,16 @@ status: stable
 
 | 文档 | 更新日期 |
 |------|----------|
-| _自动生成中..._ | |
+| [Test Driven Development](domain/engineering/test-driven-development/SKILL.md) | 2026-07-01 |
+| [Secure Credentials](domain/engineering/secure-credentials/SKILL.md) | 2026-07-01 |
+| [Project Health Scanner](domain/engineering/project-health-scanner/SKILL.md) | 2026-07-01 |
+| [Project File Organization](domain/engineering/project-file-organization/SKILL.md) | 2026-07-01 |
+| [Project File Creation Policy](domain/engineering/project-file-creation-policy/SKILL.md) | 2026-07-01 |
+| [Harness Engineering Thinking](domain/engineering/harness-engineering-thinking/SKILL.md) | 2026-07-01 |
+| [Dependency Management](domain/engineering/dependency-management/SKILL.md) | 2026-07-01 |
+| [Db Schema Sync](domain/engineering/db-schema-sync/SKILL.md) | 2026-07-01 |
+| [Code Size Constraint](domain/engineering/code-size-constraint/SKILL.md) | 2026-07-01 |
+| [Alpha Knowledge Db Schema](domain/engineering/alpha-knowledge-db-schema/SKILL.md) | 2026-07-01 |
 
 ---
 
