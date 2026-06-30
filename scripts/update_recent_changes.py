@@ -1,12 +1,30 @@
 #!/usr/bin/env python3
 """
-自动更新首页最近更新列表
+自动更新首页最近更新列表 - 优化版
 """
 
 import os
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
+
+def get_doc_title(md_file):
+    """获取文档标题，优先从文件内容提取，其次从文件名"""
+    try:
+        content = md_file.read_text(encoding="utf-8")
+        # 尝试从第一个 # 标题提取
+        match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+        if match:
+            return match.group(1).strip()
+    except:
+        pass
+    
+    # 回退到文件名
+    stem = md_file.stem
+    if stem == "SKILL":
+        # 对于 SKILL.md，使用父目录名
+        return md_file.parent.name.replace("-", " ").title()
+    return stem.replace("-", " ").title()
 
 def get_recent_docs(days=30, max_items=10):
     docs_dir = Path(__file__).parent.parent / "docs"
@@ -19,8 +37,12 @@ def get_recent_docs(days=30, max_items=10):
         mtime = datetime.fromtimestamp(md_file.stat().st_mtime)
         if mtime >= cutoff:
             rel_path = md_file.relative_to(docs_dir)
-            title = md_file.stem.replace("-", " ").title()
-            recent_files.append({"path": str(rel_path).replace("\\", "/"), "title": title, "mtime": mtime})
+            title = get_doc_title(md_file)
+            recent_files.append({
+                "path": str(rel_path).replace("\\", "/"),
+                "title": title,
+                "mtime": mtime
+            })
 
     recent_files.sort(key=lambda x: x["mtime"], reverse=True)
     return recent_files[:max_items]
