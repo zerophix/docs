@@ -13,10 +13,10 @@ status: stable
 
 | 层级 | 技术 |
 |------|------|
-| 文档引擎 | MkDocs + Material Theme |
-| 版本控制 | Git + GitHub Pages |
-| 知识管理 | L1/L2/L3 四级深度结构 |
-| 协作工具 | OpenCode AI 集成 |
+| **文档引擎** | MkDocs + Material Theme |
+| **版本控制** | Git + GitHub Pages |
+| **知识管理** | L1/L2/L3 四级深度结构 |
+| **协作工具** | OpenCode AI 集成 |
 
 ## 快速导航
 
@@ -29,7 +29,6 @@ status: stable
 | [深度沉淀](deep/README.md) | L3 Deep：系统性知识总结 |
 | [技能库](skills/README.md) | 可复用技能卡片 |
 | [贡献指南](guide/README.md) | 命名规范、文档模板、部署说明 |
-| [MCP 工作流](mcp-workflow.md) | MCP Filesystem 配置流程 |
 
 ## 当前状态
 
