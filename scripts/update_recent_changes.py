@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""
+自动更新首页最近更新列表
+"""
+
+import os
+import re
+from datetime import datetime, timedelta
+from pathlib import Path
+
+def get_recent_docs(days=30, max_items=10):
+    docs_dir = Path(__file__).parent.parent / "docs"
+    recent_files = []
+    cutoff = datetime.now() - timedelta(days=days)
+
+    for md_file in docs_dir.rglob("*.md"):
+        if any(part in str(md_file) for part in ["meta/templates", "index.md", "README.md"]):
+            continue
+        mtime = datetime.fromtimestamp(md_file.stat().st_mtime)
+        if mtime >= cutoff:
+            rel_path = md_file.relative_to(docs_dir)
+            title = md_file.stem.replace("-", " ").title()
+            recent_files.append({"path": str(rel_path).replace("\\", "/"), "title": title, "mtime": mtime})
+
+    recent_files.sort(key=lambda x: x["mtime"], reverse=True)
+    return recent_files[:max_items]
+
+def generate_table(docs):
+    lines = ["| 文档 | 最后更新 |", "|------|----------|"]
+    for doc in docs:
+        date_str = doc["mtime"].strftime("%Y-%m-%d")
+        link = f"[{doc['title']}]({doc['path']})"
+        lines.append(f"| {link} | {date_str} |")
+    return "\n".join(lines)
+
+def update_index():
+    index_path = Path(__file__).parent.parent / "docs" / "index.md"
+    content = index_path.read_text(encoding="utf-8")
+    new_section = generate_table(get_recent_docs())
+    pattern = r'(## 📊 最近更新\n\n)(.*?)(\n\n---)'
+    replacement = f"\\1{new_section}\n\n---"
+    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    index_path.write_text(new_content, encoding="utf-8")
+    print(f"✅ 已更新 {len(get_recent_docs())} 个文档到 index.md")
+
+if __name__ == "__main__":
+    update_index()
