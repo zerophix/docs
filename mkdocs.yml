@@ -1,15 +1,15 @@
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 思维笔记 — 项目文档站
+# 思维笔记 — MkDocs 配置
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 site_name: "思维笔记"
-site_description: "AI 协作开发笔记与知识管理"
+site_description: "个人知识沉淀 · AI 协作开发笔记"
 site_author: zerophix
-site_url: https://zerophix.github.io/learning-log/
+site_url: https://zerophix.github.io/docs/
 
 # Repository
-repo_name: zerophix/learning-log
-repo_url: https://github.com/zerophix/learning-log
+repo_name: zerophix/docs
+repo_url: https://github.com/zerophix/docs
 edit_uri: edit/master/docs/
 
 # Copyright
@@ -18,67 +18,21 @@ copyright: Copyright &copy; 2026 zerophix
 # ── Navigation ──
 nav:
   - 首页: index.md
-  - 文档规范: DOC-GUIDE.md
-
-  - 架构设计:
-    - 概览: architecture/index.md
-    - AI 协作机制: architecture/ai-collaboration.md
-    - 后端设计: architecture/backend-design.md
-    - 前端设计系统: architecture/frontend-design.md
-    - MCP 工作流: architecture/mcp-workflow.md
-
-  - 开发指南:
-    - 概览: guides/index.md
-    - 安装指南: guides/installation.md
-    - 快速上手: guides/quickstart.md
-    - 配置说明: guides/configuration.md
-    - 后端开发: guides/backend.md
-    - 自动化快速参考: guides/guide-automation-quick-reference.md
-    - 通用设计: guides/guide-generic-design.md
-    - Learning Log 可移植指南: guides/guide-learning-log-portable.md
-    - Learning Log README: guides/guide-learning-log-readme.md
-    - MCP 使用指南: guides/guide-mcp-usage.md
-    - Mermaid 使用指南: guides/guide-mermaid.md
-    - 项目地图指南: guides/guide-project-map.md
-    - Redis 集群指南: guides/guide-redis-cluster.md
-    - 工作流指南: guides/guide-workflow.md
-
-  - 参考文档:
-    - 概览: reference/index.md
-    - API 参考: reference/api.md
-    - 配置参考: reference/configuration.md
-    - 错误代码: reference/error-codes.md
-    - 常见问题: reference/faq.md
-
-  - 变更日志:
-    - 概览: changelog/index.md
-
-  - 笔记:
-    - 概览: notes/index.md
-    - 技能:
-        - 自动化: notes/skills/automate.md
-        - Coach: notes/skills/coach.md
-        - Docker: notes/skills/docker.md
-        - 文档编写: notes/skills/docwrite.md
-        - Flash Insight: notes/skills/flash-insight.md
-        - Git: notes/skills/git.md
-        - 初始化: notes/skills/init.md
-        - Interview: notes/skills/interview.md
-        - 知识管理: notes/skills/knowledge.md
-        - 日志: notes/skills/log.md
-        - 思维导图: notes/skills/map.md
-        - MVP: notes/skills/mvp.md
-        - 原则: notes/skills/principles.md
-        - 质量: notes/skills/quality.md
-        - Resume Context: notes/skills/resume-context.md
-        - Review: notes/skills/review.md
-        - Topic Consolidate: notes/skills/topic-consolidate.md
-        - Workspace Orchestrator: notes/skills/workspace-orchestrator.md
-
-  - 周报:
-    - 概览: weekly-reports/index.md
-
-  - 归档: archive/index.md
+  - 知识地图: map/README.md
+  - 时间线: chrono/README.md
+  - 领域知识:
+    - AI 开发: domain/ai/README.md
+    - 工程实践: domain/engineering/README.md
+    - 量化金融: domain/quant/README.md
+  - 灵感碎片: peek/README.md
+  - 学习日志: log/README.md
+  - 深度沉淀: deep/README.md
+  - 技能库: skills/README.md
+  - 指南:
+    - 贡献指南: guide/README.md
+    - 命名规范: guide/conventions.md
+    - 部署指南: guide/deployment.md
+  - MCP 工作流: mcp-workflow.md
 
 # ── Theme ──
 theme:
@@ -86,13 +40,13 @@ theme:
   language: zh
 
   features:
-    - navigation.top             # 回到顶部
-    - navigation.tracking        # 滚动高亮当前页面
-    - content.code.copy          # 代码块复制
-    - content.code.annotate      # 代码行注释
-    - search.highlight           # 搜索高亮
-    - search.suggest             # 搜索建议
-    - toc.follow                 # 右侧目录跟随
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+    - toc.follow
 
   palette:
     - scheme: default
@@ -124,6 +78,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
+      enable_git_follow: false
   - minify:
       minify_html: true
 
