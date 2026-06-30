@@ -1,25 +1,24 @@
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 思维笔记 — MkDocs 配置
+# 思维笔记 — Mkdocs 配置
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 site_name: "思维笔记"
 site_description: "个人知识沉淀 · AI 协作开发笔记"
-site_author: zerophix
-site_url: https://zerophix.github.io/docs/
+site_author: "zerophix"
+site_url: "https://zerophix.github.io/docs/"
 
 # Repository
-repo_name: zerophix/docs
-repo_url: https://github.com/zerophix/docs
-edit_uri: edit/master/docs/
+repo_name: "zerophix/docs"
+repo_url: "https://github.com/zerophix/docs"
+edit_uri: "edit/master/docs/"
 
 # Copyright
-copyright: Copyright &copy; 2026 zerophix
+copyright: "Copyright &copy; 2026 zerophix"
 
 # ── Navigation ──
 nav:
   - 首页: index.md
   - 知识地图: map/README.md
-  - 时间线: chrono/README.md
   - 领域知识:
     - AI 开发: domain/ai/README.md
     - 工程实践: domain/engineering/README.md
@@ -34,42 +33,48 @@ nav:
     - 部署指南: guide/deployment.md
   - MCP 工作流: mcp-workflow.md
 
-# ── Theme ──
+# ── Theme: Material for MkDocs ──
 theme:
   name: material
   language: zh
 
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.highlight
-    - search.share
-    - toc.integrate
-    - content.code.copy
-    - content.code.annotate
-
+  # 调色板：默认暗色模式（Slate），支持切换
   palette:
-    - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: 切换亮色模式
     - scheme: slate
-      primary: blue
+      primary: indigo
       accent: blue
+      media: "(prefers-color-scheme: dark)"
       toggle:
         icon: material/brightness-4
-        name: 切换暗色模式
+        name: 切换到亮色模式
+    - scheme: default
+      primary: indigo
+      accent: blue
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色模式
 
+  # 界面高级特性
+  features:
+    - navigation.tabs            # 顶部标签栏
+    - navigation.sections        # 侧边栏分组显示
+    - navigation.expand          # 默认展开侧边栏
+    - navigation.top             # 返回顶部按钮
+    - search.suggest             # 搜索建议
+    - search.highlight           # 搜索高亮
+    - content.code.copy          # 代码块复制按钮
+    - content.code.annotate      # 代码行注释
+    - toc.follow                 # 右侧目录跟随滚动
+
+  # 字体
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: "Noto Sans SC"
+    code: "JetBrains Mono"
 
+  # 图标
   icon:
-    repo: fontawesome/brands/github
+    repo: "fontawesome/brands/github"
 
 # ── Plugins ──
 plugins:
@@ -77,15 +82,27 @@ plugins:
       lang:
         - zh
         - en
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z])'
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
       enable_git_follow: false
+      timezone: "Asia/Shanghai"
+      locale: "zh-CN"
   - minify:
       minify_html: true
 
-# ── Extensions ──
+# ── Markdown Extensions ──
 markdown_extensions:
+  # 列表与定义
+  - def_list
+  - tables
+
+  #  admonition (提示框)
+  - admonition
+  - pymdownx.details
+
+  # 代码高亮
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -97,6 +114,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # 文本增强
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tabbed:
@@ -104,18 +123,20 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - admonition
-  - pymdownx.details
+
+  # 键位、标记、片段
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+
+  # 目录
   - toc:
       permalink: true
       toc_depth: 3
+
+  # 更多
   - attr_list
   - md_in_html
-  - def_list
-  - tables
-  - pymdownx.snippets
-  - pymdownx.keys
-  - pymdownx.mark
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.tilde
@@ -126,8 +147,8 @@ markdown_extensions:
 # ── Extra ──
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/zerophix
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/zerophix"
   generator: false
 
 extra_css:
