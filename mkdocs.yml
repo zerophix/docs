@@ -18,20 +18,10 @@ copyright: "Copyright &copy; 2026 zerophix"
 # ── Navigation ──
 nav:
   - 首页: index.md
-  - 知识地图: map/README.md
-  - 领域知识:
-    - AI 开发: domain/ai/README.md
-    - 工程实践: domain/engineering/README.md
-    - 量化金融: domain/quant/README.md
-  - 灵感碎片: peek/README.md
-  - 学习日志: log/README.md
-  - 深度沉淀: deep/README.md
-  - 技能库: skills/README.md
+  - 文档规范: DOC-GUIDE.md
   - 指南:
-    - 贡献指南: guide/README.md
-    - 命名规范: guide/conventions.md
     - 部署指南: guide/deployment.md
-  - MCP 工作流: mcp-workflow.md
+  - 归档: archive/index.md
 
 # ── Theme: Material for MkDocs ──
 theme:
